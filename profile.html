@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="Content-Security-Policy" content=".src" />
+    <title>Dodok Vape store - Profile</title>
+    <link rel="icon" href="img/vape.png" type="image/png" />
+    <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="vendors/nice-select/nice-select.css" />
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="vendors/bootstrap-icons/bootstrap-icons.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      body,
+      html {
+        height: 100%;
+      }
+      /* workaround modal-open padding issue */
+
+      body.modal-open {
+        padding-right: 0 !important;
+      }
+
+      #sidebar {
+        padding-left: 0;
+      }
+      /*
+ * Off Canvas at medium breakpoint
+ * --------------------------------------------------
+ */
+
+      @media screen and (max-width: 48em) {
+        .row-offcanvas {
+          position: relative;
+          -webkit-transition: all 0.25s ease-out;
+          -moz-transition: all 0.25s ease-out;
+          transition: all 0.25s ease-out;
+        }
+        .row-offcanvas-left .sidebar-offcanvas {
+          left: -33%;
+        }
+        .row-offcanvas-left.active {
+          left: 33%;
+          margin-left: -6px;
+        }
+        .sidebar-offcanvas {
+          position: absolute;
+          top: 0;
+          width: 33%;
+          height: 100%;
+        }
+      }
+      /*
+ * Off Canvas wider at sm breakpoint
+ * --------------------------------------------------
+ */
+
+      @media screen and (max-width: 34em) {
+        .row-offcanvas-left .sidebar-offcanvas {
+          left: -45%;
+        }
+        .row-offcanvas-left.active {
+          left: 45%;
+          margin-left: -6px;
+        }
+        .sidebar-offcanvas {
+          width: 45%;
+        }
+      }
+
+      .card {
+        overflow: hidden;
+      }
+
+      .card-block .rotate {
+        z-index: 8;
+        float: right;
+        height: 100%;
+      }
+
+      .card-block .rotate i {
+        color: rgba(20, 20, 20, 0.15);
+        position: absolute;
+        left: 0;
+        left: auto;
+        right: -10px;
+        bottom: 0;
+        display: block;
+        -webkit-transform: rotate(-44deg);
+        -moz-transform: rotate(-44deg);
+        -o-transform: rotate(-44deg);
+        -ms-transform: rotate(-44deg);
+        transform: rotate(-44deg);
+      }
+      /* profile */
+
+      .emp-profile {
+        padding: 3%;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        border-radius: 0.5rem;
+        background: #fff;
+      }
+      .profile-img {
+        text-align: center;
+      }
+      .profile-img img {
+        width: 50%;
+        height: 100%;
+      }
+      .profile-img .file {
+        position: relative;
+        overflow: hidden;
+        margin-top: -20%;
+        width: 70%;
+        border: none;
+        border-radius: 0;
+        font-size: 15px;
+        background: #212529b8;
+      }
+      .profile-img .file input {
+        position: absolute;
+        opacity: 0;
+        right: 0;
+        top: 0;
+      }
+      .profile-head h5 {
+        color: #333;
+      }
+      .profile-head h6 {
+        color: #0062cc;
+      }
+      .profile-edit-btn {
+        border: none;
+        border-radius: 1.5rem;
+        width: 70%;
+        padding: 2%;
+        font-weight: 600;
+        color: #6c757d;
+        cursor: pointer;
+      }
+      .proile-rating {
+        font-size: 12px;
+        color: #818182;
+        margin-top: 5%;
+      }
+      .proile-rating span {
+        color: #495057;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .profile-head .nav-tabs {
+        margin-bottom: 5%;
+      }
+      .profile-head .nav-tabs .nav-link {
+        font-weight: 600;
+        border: none;
+      }
+      .profile-head .nav-tabs .nav-link.active {
+        border: none;
+        border-bottom: 2px solid #0062cc;
+      }
+      .profile-work {
+        padding: 14%;
+        margin-top: -15%;
+      }
+      .profile-work p {
+        font-size: 12px;
+        color: #818182;
+        font-weight: 600;
+        margin-top: 10%;
+      }
+      .profile-work a {
+        text-decoration: none;
+        color: #495057;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .profile-work ul {
+        list-style: none;
+      }
+      .profile-tab label {
+        font-weight: 600;
+      }
+      .profile-tab p {
+        font-weight: 600;
+        color: #0062cc;
+      }
+    </style>
+  </head>
+  <body style="margin: 0; -webkit-overflow-scrolling: touch">
+    <!--================ Start Header Menu Area =================-->
+    <header class="header_area">
+      <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <a class="navbar-brand logo_h" href="index.html"><img src="img/logo-su.png" alt="" width="115" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+              <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+                <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item submenu dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item"><a class="nav-link" href="category.html">Shop Category</a></li>
+                    <li class="nav-item"><a class="nav-link" href="single-product.html">Product Details</a></li>
+                    <li class="nav-item"><a class="nav-link" href="checkout.html">Product Checkout</a></li>
+                    <li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Shopping Cart</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item submenu dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item submenu dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tracking-order.html">Tracking</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              </ul>
+
+              <ul class="nav-shop">
+                <li class="nav-item">
+                  <button data-toggle="modal" data-target=".bds-example-modal-lg" type="button"><i class="ti-search"></i></button>
+                </li>
+                <li class="nav-item">
+                  <button onclick="window.location.href='cart.html'"><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button>
+                </li>
+                <li class="nav-item"><a class="button button-header" href="#" onclick="window.location.href='checkout.html'">Buy Now</a></li>
+                <li class="nav-item"><a class="button button-header" href="#" data-toggle="modal" data-target=".bd-example-modal-lg" type="button">Login / Register</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- Modal -->
+      <section id="modal">
+        <div class="modal fade bds-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form action="//www.google.com/search" method="get" target="_blank">
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Seacrh</label>
+                    <input type="text" class="form-control" name="q" />
+                  </div>
+                  <button type="submit" class="btn btn-group-lg">Seacrh</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Login / Rigester</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <section class="login_box_area section-margin">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="login_box_img">
+                          <div class="hover">
+                            <h4>New to our website?</h4>
+                            <p>There are advances being made in science and technology everyday, and a good example of this is the</p>
+                            <a class="button button-account" href="register.html">Create an Account</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="login_form_inner">
+                          <h3>Log in to enter</h3>
+                          <form class="row login_form" action="#/" id="contactForm">
+                            <div class="col-md-12 form-group">
+                              <input type="text" class="form-control" id="name" name="name" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'" />
+                            </div>
+                            <div class="col-md-12 form-group">
+                              <input type="text" class="form-control" id="name" name="name" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'" />
+                            </div>
+                            <div class="col-md-12 form-group">
+                              <div class="creat_account">
+                                <input type="checkbox" id="f-option2" name="selector" />
+                                <label for="f-option2">Keep me logged in</label>
+                              </div>
+                            </div>
+                            <div class="col-md-12 form-group">
+                              <button type="submit" value="submit" class="button button-login w-100">Log In</button>
+                              <a href="#">Forgot Password?</a>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <!--================ End Header Menu Area =================-->
+
+    <main class="site-main">
+      <div class="section-intro pb-60px">
+        <p>Home Store</p>
+        <h2>Store <span class="section-intro__style bi bi-star-fill">Dodok</span></h2>
+      </div>
+      <section class="section-padding">
+        <div class="container emp-profile">
+          <form method="post">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="profile-img">
+                  <img src="img/users.jpg" alt="" width="30" />
+                  <div class="file btn btn-lg btn-primary">
+                    Change Photo
+                    <input type="file" name="file" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="profile-head">
+                  <h5>Dodok</h5>
+                  <h6>Admin</h6>
+                  <p class="proile-rating">Stars : <span>8/10</span></p>
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About Store</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">details Store</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="profile-work">
+                  <h4>Store Manegemen</h4>
+                  <a href="#">Penjualan</a><br />
+                  <a href="#">Pendapatan</a><br />
+                  <a href="#">transaksi</a><br />
+                  <a href="#">Daftar Barang</a><br />
+                  <a href="#">Manegemen Pelangan</a><br />
+                  <a href="#">Pengaturan</a><br />
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="tab-content profile-tab" id="myTabContent">
+                  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label>User Id</label>
+                      </div>
+                      <div class="col-md-6">
+                        <p>Dodok-Admin</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label>Name</label>
+                      </div>
+                      <div class="col-md-6">
+                        <p>Dodok</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label>Email</label>
+                      </div>
+                      <div class="col-md-6">
+                        <p>dodokngntd@gmail.com</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label>Phone</label>
+                      </div>
+                      <div class="col-md-6">
+                        <p>+62 838-6302-3796</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label>View Your Store</label>
+                      </div>
+                      <div class="col-md-6">
+                        <p>120 <i class="bi bi-eye"></i></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label>Total Transactions</label>
+                      </div>
+                      <div class="col-md-6">
+                        <p>230 person</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label>total goods</label>
+                      </div>
+                      <div class="col-md-6">
+                        <p>120 goods</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="section-margin border-top-0 container-fluid" style="position: relative">
+        <div class="col-md-10 col-lg-10">
+          <div class="row text-center">
+            <div class="col-xl-3 col-lg-6 mb-5">
+              <div class="card card-inverse card-success">
+                <div class="card-block bg-success">
+                  <div class="rotate">
+                    <i class="bi bi-bag-check-fill fa-5x"></i>
+                  </div>
+                  <div class="text-center">
+                    <h6>Product</h6>
+                    <h1 class="display-1">134</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 mb-5">
+              <div class="card card-inverse card-danger">
+                <div class="card-block bg-danger">
+                  <div class="rotate">
+                    <i class="fa fa-list fa-4x"></i>
+                  </div>
+                  <h6 class="text-uppercase">Posts</h6>
+                  <h1 class="display-1">137</h1>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 mb-5">
+              <div class="card card-inverse card-info">
+                <div class="card-block bg-info">
+                  <div class="rotate">
+                    <i class="fa fa-twitter fa-5x"></i>
+                  </div>
+                  <h6 class="text-uppercase">Tweets</h6>
+                  <h1 class="display-1">125</h1>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 mb-5">
+              <div class="card card-inverse card-warning">
+                <div class="card-block bg-warning">
+                  <div class="rotate">
+                    <i class="fa fa-share fa-5x"></i>
+                  </div>
+                  <h6 class="text-uppercase">Shares</h6>
+                  <h1 class="display-1">36</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-9 col-md-8">
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead class="thead-inverse">
+                <tr>
+                  <th>#</th>
+                  <th>Label</th>
+                  <th>Header</th>
+                  <th>Column</th>
+                  <th>Data</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1,001</td>
+                  <td>responsive</td>
+                  <td>bootstrap</td>
+                  <td>cards</td>
+                  <td>grid</td>
+                </tr>
+                <tr>
+                  <td>1,002</td>
+                  <td>rwd</td>
+                  <td>web designers</td>
+                  <td>theme</td>
+                  <td>responsive</td>
+                </tr>
+                <tr>
+                  <td>1,003</td>
+                  <td>free</td>
+                  <td>open-source</td>
+                  <td>download</td>
+                  <td>template</td>
+                </tr>
+                <tr>
+                  <td>1,003</td>
+                  <td>frontend</td>
+                  <td>developer</td>
+                  <td>coding</td>
+                  <td>card panel</td>
+                </tr>
+                <tr>
+                  <td>1,004</td>
+                  <td>migration</td>
+                  <td>bootstrap 4</td>
+                  <td>mobile-first</td>
+                  <td>design</td>
+                </tr>
+                <tr>
+                  <td>1,005</td>
+                  <td>navbar</td>
+                  <td>sticky</td>
+                  <td>jumbtron</td>
+                  <td>header</td>
+                </tr>
+                <tr>
+                  <td>1,006</td>
+                  <td>collapse</td>
+                  <td>affix</td>
+                  <td>submenu</td>
+                  <td>footer</td>
+                </tr>
+                <tr>
+                  <td>1,007</td>
+                  <td>layout</td>
+                  <td>examples</td>
+                  <td>themes</td>
+                  <td>grid</td>
+                </tr>
+                <tr>
+                  <td>1,008</td>
+                  <td>migration</td>
+                  <td>bootstrap 4</td>
+                  <td>flexbox</td>
+                  <td>design</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-margin calc-60px container-fluid">
+        <div class="section-intro pb-60px">
+          <p>Shop</p>
+          <h2>Shop <span class="section-intro__style">Card</span></h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product1.png" alt="" />
+                <ul class="card-product__imgOverlay">
+                  <li>
+                    <button><i class="ti-shopping-cart"></i></button>
+                  </li>
+                  <li>
+                    <button><i class="bi bi-bag"></i></button>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="text-left" style="font-size: 15px; color: #000">
+                  <a href="#">ulasan <span>123</span> <i class="bi bi-star-fill" style="color: #ffc53e"></i></a>
+                </div>
+                <p>Item</p>
+                <h4 class="card-product__title"><a href="single-product.html">R-VAPE HYBRID 80w Kit</a></h4>
+                <p class="card-product__price">Rp 400.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product2.png" alt="" />
+                <ul class="card-product__imgOverlay">
+                  <li>
+                    <button><i class="ti-shopping-cart"></i></button>
+                  </li>
+                  <li>
+                    <button><i class="bi bi-bag"></i></button>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="text-left" style="font-size: 15px; color: #000">
+                  <a href="#">ulasan <span>123</span> <i class="bi bi-star-fill" style="color: #ffc53e"></i></a>
+                </div>
+                <p>Accessories Item</p>
+                <h4 class="card-product__title"><a href="single-product.html">RDA reload Essential 24mm 24 mm Single Dual coil Best clone</a></h4>
+                <p class="card-product__price">Rp115.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product3.png" alt="" />
+                <ul class="card-product__imgOverlay">
+                  <li>
+                    <button><i class="ti-shopping-cart"></i></button>
+                  </li>
+                  <li>
+                    <button><i class="bi bi-bag"></i></button>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="text-left" style="font-size: 15px; color: #000">
+                  <a href="#">ulasan <span>123</span> <i class="bi bi-star-fill" style="color: #ffc53e"></i></a>
+                </div>
+                <p>Item</p>
+                <h4 class="card-product__title"><a href="single-product.html">Jarvis Pod SIap Kebul by Roy Ricardo AUHENTIC Vape Pod Vapor</a></h4>
+                <p class="card-product__price">Rp 219.900</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product4.png" alt="" />
+                <ul class="card-product__imgOverlay">
+                  <li>
+                    <button><i class="ti-shopping-cart"></i></button>
+                  </li>
+                  <li>
+                    <button><i class="bi bi-bag"></i></button>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="text-left" style="font-size: 15px; color: #000">
+                  <a href="#">ulasan <span>123</span> <i class="bi bi-star-fill" style="color: #ffc53e"></i></a>
+                </div>
+                <p>Accessories Item</p>
+                <h4 class="card-product__title"><a href="single-product.html">CARTRIDGE URSA NANO POD 2.5ML 0.8 / 1.0 AUTHENTIC BY LOST VAPE 3PCS</a></h4>
+                <p class="card-product__price">Rp 90.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product5.png" alt="" />
+                <ul class="card-product__imgOverlay">
+                  <li>
+                    <button><i class="ti-shopping-cart"></i></button>
+                  </li>
+                  <li>
+                    <button><i class="bi bi-bag"></i></button>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="text-left" style="font-size: 15px; color: #000">
+                  <a href="#">ulasan <span>123</span> <i class="bi bi-star-fill" style="color: #ffc53e"></i></a>
+                </div>
+                <p>Item</p>
+                <h4 class="card-product__title"><a href="single-product.html">URSA NANO PRO POD KIT 25W 900MAH AUTHENTIC BY LOST VAPE</a></h4>
+                <p class="card-product__price">Rp 240.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product6.png" alt="" />
+                <ul class="card-product__imgOverlay">
+                  <li>
+                    <button><i class="ti-shopping-cart"></i></button>
+                  </li>
+                  <li>
+                    <button><i class="bi bi-bag"></i></button>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="text-left" style="font-size: 15px; color: #000">
+                  <a href="#">ulasan <span>123</span> <i class="bi bi-star-fill" style="color: #ffc53e"></i></a>
+                </div>
+                <p>Accessories Item</p>
+                <h4 class="card-product__title"><a href="single-product.html">Mango Khalifa 60ML Mangga E Liquid Vape Vapor</a></h4>
+                <p class="card-product__price">Rp 87.500</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product7.png" alt="" />
+                <ul class="card-product__imgOverlay">
+                  <li>
+                    <button><i class="ti-shopping-cart"></i></button>
+                  </li>
+                  <li>
+                    <button><i class="bi bi-bag"></i></button>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="text-left" style="font-size: 15px; color: #000">
+                  <a href="#">ulasan <span>123</span> <i class="bi bi-star-fill" style="color: #ffc53e"></i></a>
+                </div>
+                <p>Accessories Item</p>
+                <h4 class="card-product__title"><a href="single-product.html">Premium Liquid Coffeemel 60ML By Emkay Brewer Vape Vapor Vaporizer</a></h4>
+                <p class="card-product__price">Rp 140.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product8.png" alt="" />
+                <ul class="card-product__imgOverlay">
+                  <li>
+                    <button><i class="ti-shopping-cart"></i></button>
+                  </li>
+                  <li>
+                    <button><i class="bi bi-bag"></i></button>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="text-left" style="font-size: 15px; color: #000">
+                  <a href="#">ulasan <span>123</span> <i class="bi bi-star-fill" style="color: #ffc53e"></i></a>
+                </div>
+                <p>Item</p>
+                <h4 class="card-product__title"><a href="#">Ursa Baby Pod Kit 800mAh by Lost Vape Free Lanyard Pods Authentic</a></h4>
+                <p class="card-product__price">Rp 155.000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--================ Start footer Area  =================-->
+    <footer class="footer">
+      <div class="footer-area">
+        <div class="container">
+          <div class="row section_gap">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="single-footer-widget tp_widgets">
+                <h4 class="footer_title large_title">Our Mission</h4>
+                <p>So seed seed green that winged cattle in. Gathering thing made fly you're no divided deep moved us lan Gathering thing us land years living.</p>
+                <p>So seed seed green that winged cattle in. Gathering thing made fly you're no divided deep moved</p>
+              </div>
+            </div>
+            <div class="offset-lg-1 col-lg-2 col-md-6 col-sm-6">
+              <div class="single-footer-widget tp_widgets">
+                <h4 class="footer_title">Quick Links</h4>
+                <ul class="list">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Shop</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Product</a></li>
+                  <li><a href="#">Brand</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+              <div class="single-footer-widget instafeed">
+                <h4 class="footer_title">Gallery</h4>
+                <ul class="list instafeed d-flex flex-wrap">
+                  <li><img src="img/gallery/r1.jpg" alt="" /></li>
+                  <li><img src="img/gallery/r2.jpg" alt="" /></li>
+                  <li><img src="img/gallery/r3.jpg" alt="" /></li>
+                  <li><img src="img/gallery/r5.jpg" alt="" /></li>
+                  <li><img src="img/gallery/r7.jpg" alt="" /></li>
+                  <li><img src="img/gallery/r8.jpg" alt="" /></li>
+                </ul>
+              </div>
+            </div>
+            <div class="offset-lg-1 col-lg-3 col-md-6 col-sm-6">
+              <div class="single-footer-widget tp_widgets">
+                <h4 class="footer_title">Contact Us</h4>
+                <div class="ml-40">
+                  <p class="sm-head">
+                    <span class="fa fa-location-arrow"></span>
+                    Head Office
+                  </p>
+                  <p>Semarang,Indonesia</p>
+
+                  <p class="sm-head">
+                    <span class="fa fa-phone"></span>
+                    Phone Number
+                  </p>
+                  <p>
+                    +62 838-6302-3796 <br />
+                    <a
+                      href="//wa.me/083863023796"
+                      target="_blank
+                    "
+                      >Baroks</a
+                    >
+                  </p>
+
+                  <p class="sm-head">
+                    <span class="fa fa-envelope"></span>
+                    Email
+                  </p>
+                  <p>dodokngntd@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row d-flex">
+            <p class="col-lg-12 footer-text text-center">
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#">Dodok Store</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--================ End footer Area  =================-->
+    <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
+    <script src="vendors/jquery.ajaxchimp.min.js"></script>
+    <script src="vendors/mail-script.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/off/off.js"></script>
+  </body>
+</html>

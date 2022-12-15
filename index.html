@@ -12,10 +12,29 @@
     <link rel="stylesheet" href="vendors/nice-select/nice-select.css" />
     <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css" />
     <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
-
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      body {
+        overflow-y: scroll;
+        position: relative;
+      }
+
+      .time {
+        color: rgb(11, 11, 11);
+        font-size: 30px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-image: url(img/home/hero-banner.png);
+      }
+
+      .cwt {
+        color: rgb(249, 249, 249);
+        font-size: 15px;
+        padding: 0 10px;
+        background-color: #3f00ff;
+      }
+    </style>
   </head>
-  <body>
+  <body style="margin: 0; -webkit-overflow-scrolling: touch">
     <!--================ Start Header Menu Area =================-->
     <header class="header_area">
       <div class="main_menu">
@@ -52,6 +71,7 @@
                   <ul class="dropdown-menu">
                     <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
                     <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html?p=dodok&tk=admin">Profile</a></li>
                     <li class="nav-item"><a class="nav-link" href="tracking-order.html">Tracking</a></li>
                   </ul>
                 </li>
@@ -165,7 +185,7 @@
                 <h4>Shop is fun</h4>
                 <h1>Browse Our Premium Product</h1>
                 <p>Us which over of signs divide dominion deep fill bring they're meat beho upon own earth without morning over third. Their male dry. They are great appear whose land fly grass.</p>
-                <a class="button button-hero" href="#" onclick="window.location.href='category.html'">Browse Now</a>
+                <a class="button button-hero" href="#carousel">Browse Now</a>
               </div>
             </div>
           </div>
@@ -174,7 +194,7 @@
       <!--================ Hero banner start =================-->
 
       <!--================ Hero Carousel start =================-->
-      <section class="section-margin mt-0">
+      <section class="section-margin mt-0" id="carousel">
         <div class="owl-carousel owl-theme hero-carousel">
           <div class="hero-carousel__slide">
             <img src="img/home/coil-vape.jpg" alt="" class="img-fluid" />
@@ -296,8 +316,8 @@
                 </div>
                 <div class="card-body">
                   <p>Accessories Item</p>
-                  <h4 class="card-product__title"><a href="single-product.html">Liquid DC Mocheese 60ml Mochi Keju Liquid Vape Pod BERPITA CUKAI</a></h4>
-                  <p class="card-product__price">Rp 109.900</p>
+                  <h4 class="card-product__title"><a href="single-product.html">CARTRIDGE URSA NANO POD 2.5ML 0.8 / 1.0 AUTHENTIC BY LOST VAPE 3PCS</a></h4>
+                  <p class="card-product__price">Rp 90.000</p>
                 </div>
               </div>
             </div>
@@ -318,9 +338,9 @@
                   </ul>
                 </div>
                 <div class="card-body">
-                  <p>Accessories</p>
-                  <h4 class="card-product__title"><a href="single-product.html">Man Office Bag</a></h4>
-                  <p class="card-product__price">$150.00</p>
+                  <p>Item</p>
+                  <h4 class="card-product__title"><a href="single-product.html">URSA NANO PRO POD KIT 25W 900MAH AUTHENTIC BY LOST VAPE</a></h4>
+                  <p class="card-product__price">Rp 240.000</p>
                 </div>
               </div>
             </div>
@@ -341,9 +361,9 @@
                   </ul>
                 </div>
                 <div class="card-body">
-                  <p>Kids Toy</p>
-                  <h4 class="card-product__title"><a href="single-product.html">Charging Car</a></h4>
-                  <p class="card-product__price">$150.00</p>
+                  <p>Accessories Item</p>
+                  <h4 class="card-product__title"><a href="single-product.html">Mango Khalifa 60ML Mangga E Liquid Vape Vapor</a></h4>
+                  <p class="card-product__price">Rp 87.500</p>
                 </div>
               </div>
             </div>
@@ -364,9 +384,9 @@
                   </ul>
                 </div>
                 <div class="card-body">
-                  <p>Accessories</p>
-                  <h4 class="card-product__title"><a href="single-product.html">Blutooth Speaker</a></h4>
-                  <p class="card-product__price">$150.00</p>
+                  <p>Accessories Item</p>
+                  <h4 class="card-product__title"><a href="single-product.html">Premium Liquid Coffeemel 60ML By Emkay Brewer Vape Vapor Vaporizer</a></h4>
+                  <p class="card-product__price">Rp 140.000</p>
                 </div>
               </div>
             </div>
@@ -387,9 +407,9 @@
                   </ul>
                 </div>
                 <div class="card-body">
-                  <p>Kids Toy</p>
-                  <h4 class="card-product__title"><a href="#">Charging Car</a></h4>
-                  <p class="card-product__price">$150.00</p>
+                  <p>Item</p>
+                  <h4 class="card-product__title"><a href="#">Ursa Baby Pod Kit 800mAh by Lost Vape Free Lanyard Pods Authentic</a></h4>
+                  <p class="card-product__price">Rp 155.000</p>
                 </div>
               </div>
             </div>
@@ -397,6 +417,108 @@
         </div>
       </section>
       <!-- ================ trending product section end ================= -->
+
+      <!--================ diskond =====================-->
+      <section class="section-margin calc-60px">
+        <div class="container">
+          <div class="section-intro pb-60px">
+            <p>Popular Item in the market</p>
+            <h2>Trending <span class="section-intro__style">Product</span></h2>
+          </div>
+          <div id="Time" class="text-center time"></div>
+          <hr />
+          <div class="card-deck">
+            <div class="card">
+              <img class="card-img-top" src="img/product/product1.png" alt="Card image cap" />
+              <div class="card-body">
+                <h5 class="card-title">R-VAPE HYBRID 80w Kit</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <button class="btn btn-danger" onclick="window.location.href='checkout.html'">Buy</button>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted" id="cwt">Last updated 3 mins ago</small>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="img/product/product2.png" alt="Card image cap" />
+              <div class="card-body">
+                <h5 class="card-title">RDA reload Essential 24mm 24 mm Single Dual coil Best clone</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <button class="btn btn-danger" onclick="window.location.href='checkout.html'">Buy</button>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted" id="cwt1">Last updated 3 mins ago</small>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="img/product/product3.png" alt="Card image cap" />
+              <div class="card-body">
+                <h5 class="card-title">Jarvis Pod SIap Kebul by Roy Ricardo AUHENTIC Vape Pod Vapor</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <button class="btn btn-danger" onclick="window.location.href='checkout.html'">Buy</button>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted" id="cwt2"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          function showTime() {
+            var date = new Date();
+            var h = date.getHours(); // 0 - 23
+            var m = date.getMinutes(); // 0 - 59
+            var s = date.getSeconds(); // 0 - 59
+            var session = 'AM';
+
+            if (h == 0) {
+              h = 12;
+            }
+
+            if (h > 12) {
+              h = h - 12;
+              session = 'PM';
+            }
+
+            h = h < 10 ? '0' + h : h;
+            m = m < 10 ? '0' + m : m;
+            s = s < 10 ? '0' + s : s;
+
+            var time = h + ':' + m + ':' + s + ' ' + session;
+            document.getElementById('Time').innerText = time;
+            document.getElementById('Time').textContent = time;
+
+            setTimeout(showTime, 1000);
+          }
+          showTime();
+          // Countdown Timer
+          var countDownDate = new Date('jan 5, 2024 15:37:25').getTime();
+
+          var x = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            // Find calculations for days, hours, minutes  and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            //display document.getElementById
+            document.getElementById('cwt').innerHTML = days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
+            document.getElementById('cwt1').innerHTML = days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
+            document.getElementById('cwt2').innerHTML = days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
+
+            //set interval
+            if (distance < 0) {
+              clearInterval(x);
+              document.getElementById('cwt').innerHTML = 'Hangus';
+              document.getElementById('cwt1').innerHTML = 'Hangus';
+              document.getElementById('cwt2').innerHTML = 'Hangus';
+            }
+          }, 1000);
+        </script>
+      </section>
 
       <!-- ================ offer section start ================= -->
       <section class="offer" id="parallax-1" data-anchor-target="#parallax-1" data-300-top="background-position: 20px 30px" data-top-bottom="background-position: 0 20px">
@@ -680,7 +802,7 @@
             <h3 class="subscribe__title">Get Update From Anywhere</h3>
             <p>Bearing Void gathering light light his eavening unto dont afraid</p>
             <div id="mc_embed_signup">
-              <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe-form form-inline mt-5 pt-1">
+              <form target="_blank" action="https://www.facebook.com/messages/t/100044238414376/?post" method="get" class="subscribe-form form-inline mt-5 pt-1">
                 <div class="form-group ml-sm-auto">
                   <input class="form-control mb-1" type="email" name="EMAIL" placeholder="Enter your email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '" />
                   <div class="info"></div>
@@ -743,25 +865,27 @@
                     <span class="fa fa-location-arrow"></span>
                     Head Office
                   </p>
-                  <p>123, Main Street, Your City</p>
+                  <p>Semarang,Indonesia</p>
 
                   <p class="sm-head">
                     <span class="fa fa-phone"></span>
                     Phone Number
                   </p>
                   <p>
-                    +123 456 7890 <br />
-                    +123 456 7890
+                    +62 838-6302-3796 <br />
+                    <a
+                      href="//wa.me/083863023796"
+                      target="_blank
+                    "
+                      >Baroks</a
+                    >
                   </p>
 
                   <p class="sm-head">
                     <span class="fa fa-envelope"></span>
                     Email
                   </p>
-                  <p>
-                    free@infoexample.com <br />
-                    www.infoexample.com
-                  </p>
+                  <p>dodokngntd@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -785,15 +909,16 @@
         </div>
       </div>
     </footer>
+    <div class="elfsight-app-04cda478-0c6b-4c58-be49-836bd4d1a98c"></div>
     <!--================ End footer Area  =================-->
-
     <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
     <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="vendors/skrollr.min.js"></script>
     <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
     <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
     <script src="vendors/jquery.ajaxchimp.min.js"></script>
     <script src="vendors/mail-script.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/off/off.js"></script>
+    <script src="https://apps.elfsight.com/p/platform.js" defer=""></script>
   </body>
 </html>

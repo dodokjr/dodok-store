@@ -1,2 +1,24 @@
-product1.png
-product2.png
+
+url/domain = https://dodokvapestore.netlyfy.app/domain
+backend{
+    database/
+    token/api/
+} database{
+    users/singup/login/profile/shop/store/text
+} token {
+    random
+} api {
+    mobile to desktop
+    card{
+        paypal
+        bri
+        bca
+    }
+}
+
+frontend {
+    //selesai/
+    sesion
+}
+
+https://github.com/dodokjr/dodok-store
